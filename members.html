@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cancer Genomics and Genetics Lab - Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <header>Cancer Genomics and Genetics Lab</header>
+
+    <div class="profile_container">
+        <div class="profile_image" id="profile_image_container"></div>
+        <div class="profile_info">
+            <h2 id="profile_name">Unknown</h2>
+            <p id="profile_bio">Loading bio..</p>
+            <button onclick="window.location.href='index.html#members'" style="margin-top: 1rem; padding: 0.5rem 1rem; background: #0059d4; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                ← Back to Members
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const profiles = {
+            panda1: {
+                name: 'Big Blue Panda',
+                image: 'images/bigbluepanda.jpeg',
+                bio: 'The giant panda (Ailuropoda melanoleuca), also known as the panda bear or simply panda, is a bear species endemic to China. It is characterised by its white coat with black patches around the eyes, ears, legs and shoulders. Its body is rotund; adult individuals weigh 100 to 115 kg (220 to 254 lb) and are typically 1.2 to 1.9 m (3 ft 11 in to 6 ft 3 in) long. It is sexually dimorphic, with males being typically 10 to 20% larger than females. A thumb is visible on its forepaw, which helps in holding bamboo in place for feeding. It has large molar teeth and expanded temporal fossa to meet its dietary requirements. It can digest starch and is mostly herbivorous with a diet consisting almost entirely of bamboo and bamboo shoots.'
+            },
+            panda2: {
+                name: 'Lalit Narayan Sahoo',
+                image: 'images/bluepanda.png',
+                bio: 'Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout most of the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, and Eurasia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails.'
+            },
+
+            anjali_di: {
+                name: "Surana Anjali Vinod",
+                image: "images/anjali di.jpg",
+                bio: "I’m a passionate and energetic researcher from Ahmedabad, with a Master’s degree in Biochemistry from St. Xavier's College, Ahmedabad. My current work focuses on exploring the role of bile acids as signaling molecules in gallbladder cancer, specifically investigating the TGR5-mediated molecular signaling pathways involved in cancer progression, aiming at potential therapeutic value. Beyond the lab, I’m someone who thrives on creativity, with a wide range of hobbies that keep my spirit lively and inspired."
+            },
+
+            apurba_di: {
+                name: "Apurba Nayak",
+                image: "images/Apurba Nayak.png",
+                bio: "Hello, I'm Apurba—a researcher driven by a deep curiosity for science and a passion for discovery. I began my academic journey with a Bachelor of Science in Microbiology (Honours) from the University of Calcutta, and I am currently pursuing an Integrated PhD at NISER. My research centers on the role of FRG1 in oral cancer, integrating bioinformatics, mutational analysis, and molecular biology to unravel cancer signaling mechanisms and identify novel therapeutic strategies. I am particularly interested in bridging the gap between fundamental biological research and translational applications, striving to transform complex datasets into meaningful insights. Beyond the lab, I find joy in reading, music, and travel—I'm a trained vocalist and an enthusiastic explorer of both ideas and places.",
+            },
+
+            kaivya_di: {
+                name: "Kaivya Dey",
+                image: 'images/kaivya di.jpg',
+                bio: 'Hi, I’m Kaivya Dey— a biotech student who’s nosy about the intricate crosstalk of cancer pathways, because why settle for surface-level when the real deal is inside? I split my time between looking through molecular pathways and overthinking brush strokes in my sketchbook. When I’m not pipetting things in the lab or digging through research papers, you’ll probably find me humming a tune, switching playlists mid-song. But when I’m in the lab, mid-experiment, I’m all in—focused, precise, and fully committed to the science. My current research focuses on Elucidating the role of SPINK1 in hepatocellular carcinoma (HCC). I worked under MD Lab during the summer of 2025, where I explored how SPINK1 influences tumor progression; navigating through various wet lab techniques. This project has sharpened my skills in experimental design, molecular analysis —solidifying my passion for cancer biology and translational research.',
+            },
+
+            manjusha_mam: {
+                name: "Dr Manjusha Dixit",
+                image: 'images/mam.jpg',
+                bio: "Dr. Dixit's research interest is to understand the genetics and molecular biology of various human genetic diseases, especially cancer. My research group is interested towards the validation and elucidation of the molecular mechanism of putative angiogenic regulators. We are also interested in finding out the role and molecular mechanism of these newly identified angiogenesis regulators, in tumorigenesis and tumor angiogenesis. We started with FRG1 (a putative angiogenic regulator) and further research led to identification of EEF1A2 and IQGAP2, as its interacting partners. Currently, we have established FRG1 to have reduced expression in cancer and its effect on various properties of cells (proliferation, migration and invasion). We found that IQGAP2 expression is also reduced but the expression of EEF1A2 is increased in tumor tissues. We discovered the mechanism of, how FRG1 and IQGAP2 behave as tumor suppressor genes but EEF1A2 behaves as an oncogene. Our data suggests that all three genes may impart tumorigenic potential by affecting angiogenesis. Another major area of our research includes understanding molecular mechanism of gallbladder cancer and establishment of genetic risk factors in Indian population. So far, we have found that SNPs present in MMP14 affect it’s expression and might be responsible for altered risk in the population of Odisha.",
+            },
+
+            mohit_bhaiya: {
+                name: "Mohit Patra",
+                image: "images/mohit bhaiya.jpg",
+                bio: "I am from Sambalpur, Odisha. I completed my Masters in BS-MS Life Science from IISER Berhampur. I joined this lab in December 2022. Currently, I am working on the mechanistic and therapeutic aspects of eEF1A2.",
+            },
+
+            payel_di: {
+                name: "Payel Chakra",
+                image: "images/payel di.jpg",
+                bio: "I am from Kolkata and have completed my Master's in Zoology from University of Calcutta. As a research scholar, I have a keen interest in cancer biology, focusing on the complex interactions within the tumor microenvironment. My work aims to understand how the cellular and molecular crosstalk influences tumor progression, immune modulation, and therapeutic response. I am particularly interested in exploring the role of FRG1 in the modulation of tumor microenvironment. Outside of academia, I nurture my green thumb through gardening and am an enthusiastic traveller, which helps me stay creative and inspired in my scientific journey.",
+            },
+
+            shithij_bhaiya: {
+                name: "Shithij T",
+                image: "images/shithij bhaiya.jpeg",
+                bio: "I am interested in Machine Learning and Gene Regulatory Networks. I am currently working on the interactions of FRG1, ING2, and MMP13 genes and their effect on cancer. I am also interested in DNA Language Models, trying to decode the language of Nonsense Mediated Decay. In addition to my lab work, I am a software developer and a network security enthusiast. I also love to play drums.",
+            },
+
+            soham_bhaiya: {
+                name: "Soham Choudhury",
+                image: "images/soham bhaiya.jpg",
+                bio: "I am from Suri, West Bengal. I completed my postgraduate studies in Life Sciences from Presidency University, Kolkata. I joined this lab in January 2021. Currently, I am working on researching the role and molecular mechanism of Bile acid intermediate in the progression of Gall bladder cancer and population predisposition.",
+            },
+
+            soumit: {
+                name: 'Soumit Paul',
+                image: '',
+                bio: "Hello, I am Soumit Paul",
+            },
+
+            talina_di: {
+                name: "Talina Mohapatra",
+                image: 'images/talina di.jpg',
+                bio: "I am from Puri, Odisha. I completed my Masters in Biotechnology from Kalinga Institute of Industrial Technology (KIIT). I joined this lab in January 2021. Currently, I am working on deciphering the interactome and therapeutic aspects of IQGAPs.",
+            },
+
+        };
+
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const profileKey = getQueryParam('profile') || 'panda1'; 
+            const profile = profiles[profileKey];
+
+            const imgContainer = document.getElementById('profile_image_container');
+            const nameElem = document.getElementById('profile_name');
+            const bioElem = document.getElementById('profile_bio');
+
+            if (profile) {
+                const img = document.createElement('img');
+                img.src = profile.image;
+                img.alt = profile.name;
+                imgContainer.appendChild(img);
+
+                nameElem.textContent = profile.name;
+                bioElem.textContent = profile.bio;
+            } else {
+                nameElem.textContent = 'Profile Not Found';
+                bioElem.textContent = 'Sorry, no data available for this profile.';
+            }
+        });
+    </script>
+
+    <footer>© 2025 Cancer Genomics and Genetics Lab</footer>
+
+</body>
+
+</html>
