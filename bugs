@@ -1,0 +1,3 @@
+Apparently, in phone, when back button is pressed while viewing a photo in gallery mode, it goes back to the profile page of the last opened members card, or mam's card if no card was opened previously.
+In PC, this problem does exist, as the back button on chrome doesnt show up in PC
+I have not fixed it yet, I will fix it later
