@@ -15,8 +15,7 @@ html {
         background-attachment: fixed;
         background-image: url(images/new_bg_2.jpg);
 
-        transition: opacity 1.5s ease-in-out;
-        opacity:1;
+
         
 }
 
