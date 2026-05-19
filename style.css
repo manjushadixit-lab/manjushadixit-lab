@@ -9,11 +9,14 @@ html {
         margin: 0;
         padding: 0;
         width: 100%;
-        background-image: url("new_bg_1.jpg");
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover; 
         background-position: center;
         background-attachment: fixed;
+        background-image: url(images/new_bg_2.jpg);
+
+        transition: opacity 1.5s ease-in-out;
+        opacity:1;
         
 }
 
