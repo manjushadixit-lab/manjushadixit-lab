@@ -14,6 +14,10 @@
 		<link rel="stylesheet" href="style.css">
 </head>
 <body class="loading">
+	<div class="background_slider">
+    	<div class="bg_slide active"></div>
+    	<div class="bg_slide"></div>
+	</div>
 		<div id="loader"><span>Cancer Genomics and Genetics Lab</span></div>
 		<div class="container">
 				<div style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
@@ -611,6 +615,58 @@
 						
 				</div>
 		</div>
+		<script>
+
+			const backgrounds = [
+
+			"new_bg1.jpg",
+			"new_bg2.jpg"
+
+			];
+
+			const slides = document.querySelectorAll(".bg_slide");
+
+			let currentBackground = 0;
+
+			slides[0].style.backgroundImage =
+			`url('${backgrounds[0]}')`;
+
+			slides[1].style.backgroundImage =
+			`url('${backgrounds[1]}')`;
+
+			function changeBackground(){
+
+			const current =
+			slides[currentBackground % 2];
+
+			const next =
+			slides[(currentBackground + 1) % 2];
+
+			const nextImage =
+			backgrounds[
+			(currentBackground + 1)
+			%
+			backgrounds.length
+			];
+
+			next.style.backgroundImage =
+			`url('${nextImage}')`;
+
+			next.classList.add("active");
+
+			setTimeout(() => {
+
+			current.classList.remove("active");
+
+			currentBackground++;
+
+			},3000);
+
+			}
+
+			setInterval(changeBackground,30000);
+
+		</script>
 
 
 		
