@@ -619,8 +619,8 @@ a.general-link {
 }
 
 .slideshow-container img {
-    height: 250px;
-    object-fit: cover;
+    height: 400px;
+    object-fit: fill;
     border-radius: 10px;
 }
 
