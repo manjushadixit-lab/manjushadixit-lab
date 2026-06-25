@@ -64,6 +64,7 @@ footer {
     color: #333;
     font-size: 0.9rem;
     margin-top: auto;
+    z-index: 1;
 }
 
 @media (max-width: 768px) {
