@@ -439,6 +439,7 @@ footer {
         color: #333;
         font-size: 0.9rem;
         border-top: 1px solid #ccc;
+        z-index: 1;
 }
 
 .image_gallery {
